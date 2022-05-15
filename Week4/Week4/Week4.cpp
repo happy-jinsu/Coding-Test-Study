@@ -3,6 +3,7 @@
 #include <map>
 #include <iostream>
 #include <sstream>
+#include <math.h>
 using namespace std;
 
 vector<int> solution(vector<int> fees, vector<string> records)
@@ -37,8 +38,7 @@ vector<int> solution(vector<int> fees, vector<string> records)
             {
                 time[index++] = token;
             }
-
-            sum = stoi(time[0]) * 60 + stoi(time[1]) - stoi(time[2]) * 60 - stoi(time[3]);
+            sum = stoi(time[0]) * 60 + stoi(time[1]) - stoi(time[2]) * 60 - stoi(time[3]); //계산 맞는지 검증 필요함.
             if (sum > 180)
             {
                 int value = fees[1] + ((sum - fees[0]) / 10 * fees[2]);
@@ -55,6 +55,10 @@ vector<int> solution(vector<int> fees, vector<string> records)
     {
         it.second = 3;
     }
+    
+    for (auto)
+    {
 
+    }
     return answer;
 }
